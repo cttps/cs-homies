@@ -2,7 +2,8 @@ package main
 
 import (
 	"os"
-	"websitetest1/controllers"
+
+	"github.com/cttps/lofi-site/controllers"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
