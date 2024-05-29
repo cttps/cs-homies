@@ -15,6 +15,10 @@ EXPOSE 6969
 ENTRYPOINT [ "/build/bin/app" ]
 
 
+# WHAT TO DO:
+# First add a .env file and specifiy LISTEN_ADDY
+
 # COMMANDS TO RUN:
 # docker build . -t lofi-docker:latest
 # docker run lofi-docker:latest
+# docker run tailwindcss -i frontend/static/input.css -o frontend/static/output.css --watch lofi-docker:latest
