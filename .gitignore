@@ -16,3 +16,6 @@
 
 # env file
 .env
+
+# binaries
+bin/*
