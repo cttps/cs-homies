@@ -2640,10 +2640,6 @@ html {
   grid-column-start: 1;
 }
 
-.col-start-2 {
-  grid-column-start: 2;
-}
-
 .row-start-1 {
   grid-row-start: 1;
 }
@@ -2672,10 +2668,6 @@ html {
   display: grid;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .w-full {
   width: 100%;
 }
@@ -2694,10 +2686,6 @@ html {
 
 .place-items-center {
   place-items: center;
-}
-
-.items-end {
-  align-items: flex-end;
 }
 
 .rounded-lg {
@@ -2732,19 +2720,6 @@ html {
   background-color: transparent;
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.fill-base-100 {
-  fill: var(--fallback-b1,oklch(var(--b1)/1));
-}
-
-.stroke-base-100 {
-  stroke: var(--fallback-b1,oklch(var(--b1)/1));
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -2767,16 +2742,8 @@ html {
   padding-bottom: 0.5rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-6xl {

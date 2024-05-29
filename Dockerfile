@@ -1,19 +1,33 @@
-FROM golang:1.21 as goPart
+##################################
+FROM golang:1.21 as go-base
+##################################
+
+WORKDIR /build
+
+COPY go.mod go.sum ./
+RUN go mod download
+# Copy everything again (idk if this makes it slower or not, i hope someone can tell me if it does lol)
+COPY . .
+# -o specifies output location (bin folder, app executable)
+RUN go build -o bin/app cmd/main.go
+
+##################################
+FROM node:20 AS node-base
+##################################
 
 WORKDIR /build
 # apparently copying this first is faster?
 COPY package*.json ./ 
-
+RUN npm install
 COPY . .
-RUN go mod download
 
-# -o specifies output location (we make a bin folder in build)
-RUN go build -o bin/app cmd/main.go
+RUN npx tailwindcss init
+
+COPY --from=go-base /build/bin/app /build/bin/app
 
 EXPOSE 6969
-
 #Where the containers main executable is
-ENTRYPOINT [ "/build/bin/app" ]
+# ENTRYPOINT [ "/build/bin/app" ]
 
 
 # WHAT TO DO:
@@ -22,4 +36,3 @@ ENTRYPOINT [ "/build/bin/app" ]
 # COMMANDS TO RUN:
 # docker build . -t lofi-docker:latest
 # docker run lofi-docker:latest
-# docker run tailwindcss -i frontend/static/input.css -o frontend/static/output.css --watch lofi-docker:latest

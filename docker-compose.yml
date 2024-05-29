@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  go:
+    build: .
+    command: /build/bin/app
+    volumes:
+      - .:/build  # Mount the main repo directory to /app in the container
+    ports:
+      - "6969:6969"
+
+  tailwind:
+    build: .
+    command: npx tailwindcss -i ./frontend/static/input.css -o ./frontend/static/output.css --watch
+    volumes:
+      - .:/build  # Ensure Tailwind CSS watches files in the main repo directory
+    ports:
+      - "3000:3000"  # Adjust if you want to serve your Tailwind CSS output
