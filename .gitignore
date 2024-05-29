@@ -19,3 +19,5 @@
 
 # binaries
 bin/*
+
+node_modules

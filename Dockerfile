@@ -1,8 +1,9 @@
-FROM golang:1.21
+FROM golang:1.21 as goPart
 
 WORKDIR /build
 # apparently copying this first is faster?
 COPY package*.json ./ 
+
 COPY . .
 RUN go mod download
 
