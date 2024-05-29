@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="fantasy">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,14 @@
   </head>
   <body>
 
-    <h1 class="text-6xl text-center font-semibold m-12 shadow-black bg-transparent">Welcome</h1>
+    <div class="w-full p-3 grid place-items-end">
+      <label class="cursor-pointer grid grid-cols-1 splace-items-center">
+        <p class="text-center w-full font-semibold">Theme</p>
+        <input type="checkbox" value="luxury" class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"/>
+      </label>
+    </div>
+
+    <h1 class="text-6xl text-center font-semibold m-12 shadow-black bg-transparent">Welcsdasdome</h1>
 
 
     <div class="grid place-items-center">
@@ -18,7 +25,7 @@
           <label for="loginid" class="mb-3 text-sm font-medium">Login ID</label>
           <input type="text" id="loginid" name="loginid" class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 w-full p-2.5" placeholder="XXXXXXXXXXXX" required>
         </div>
-        <button type="submit" class="text-center hover:shadow-lg hover:bg-blue-800 duration-200 transition-shadow py-2 px-4 bg-blue-600 rounded-lg text-white">Submit</button>
+        <button type="submit" class="text-center btn btn-primary">Submit</button>
       </form>
 
       <button hx-post="/api/create-user" hx-target="#logintokengen" hx-swap="innerHTML" class="hover:shadow-lg hover:bg-blue-800 duration-200 transition-shadow py-2 px-4 bg-blue-600 m-2 rounded-lg text-white">Generate Login Code</button>
