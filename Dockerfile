@@ -15,10 +15,8 @@ EXPOSE 6969
 ENTRYPOINT [ "/build/bin/app" ]
 
 
-# WHAT TO DO:
-# First add a .env file and specifiy LISTEN_ADDY
 
-# COMMANDS TO RUN:
+### COMMANDS TO RUN: ###
 # docker-compose up --build
 # THEN
 # make css (to watch tailwind realtime)
