@@ -6,6 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+var UserArray = [1]string{"Evan"}
+
 func LandingPage(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", gin.H{})
 }
