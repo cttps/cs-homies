@@ -18,7 +18,7 @@ func main() {
 	r.LoadHTMLGlob("frontend/templates/**/*")
 	r.Static("frontend/static", "./frontend/static")
 
-	users := []string{"bobby", "evan"}
+	users := []string{"evan"}
 
 	r.GET("/", controllers.LandingPage)
 
