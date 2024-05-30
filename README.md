@@ -1,1 +1,29 @@
-# Hello World :p
+# hi cs homies
+
+this is cs homies website. why? because uh we need cshomies.com
+so i thought we would use this to host random stuff
+
+## how to get started
+ya its rlly ez:
+
+1. clone the repo: `git clone https://github.com/cttps/cs-homies.git`
+
+2. CHECK THE REQUIREMENTS to get all teh stuff u need
+
+3. run `make docker-run` in a terminal.
+
+4. *(optional)* run `make css` in a seperate terminal if u plan on using tailwind + daisy ui to edit any of ur pages. (just edit the template files )
+
+## requirements
+1. Make sure u can run make commands from the Makefile. (Do make test to check). Probably Windows only issue, so download https://www.gnu.org/software/make/ or something if ur on win.
+
+2. Ur probably gonna need npm, so u might have to download nodejs. https://nodejs.org/en/download/package-manager.
+
+3. Now with npm, download the dependencies by running `npm install`.
+
+4. idk if there is anything that doesnt work lmk and i will update this
+
+
+## 0aq (nobody has asked me any questions)
+1. no u dont need golang cus its in a docker container
+2. if u want endpoints opened to do stuff on the server, lmk or make the pull request urself if u can bother learning the language

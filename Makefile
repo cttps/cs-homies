@@ -8,4 +8,7 @@ docker-run:
 	@docker-compose up --build
 
 css:
-	npx tailwindcss -i frontend/static/input.css -o frontend/static/output.css --watch
+	@npx tailwindcss -i frontend/static/input.css -o frontend/static/output.css --watch
+
+test:
+	@echo You have make so dw
