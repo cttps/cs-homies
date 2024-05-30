@@ -11,28 +11,29 @@ COPY . .
 # -o specifies output location (bin folder, app executable)
 RUN go build -o bin/app cmd/main.go
 
-##################################
-FROM node:20 AS node-base
-##################################
+# ##################################
+# FROM node:20 AS node-base
+# ##################################
 
-WORKDIR /build
-# apparently copying this first is faster?
-COPY package*.json ./ 
-RUN npm install
-COPY . .
+# WORKDIR /build
+# # apparently copying this first is faster?
+# COPY package*.json ./ 
+# RUN npm install
+# COPY . .
 
-RUN npx tailwindcss init
+# RUN npx tailwindcss init
 
-COPY --from=go-base /build/bin/app /build/bin/app
+# COPY --from=go-base /build/bin/app /build/bin/app
 
 EXPOSE 6969
 #Where the containers main executable is
-# ENTRYPOINT [ "/build/bin/app" ]
+ENTRYPOINT [ "/build/bin/app" ]
 
 
 # WHAT TO DO:
 # First add a .env file and specifiy LISTEN_ADDY
 
 # COMMANDS TO RUN:
-# docker build . -t lofi-docker:latest
-# docker run lofi-docker:latest
+# docker-compose up --build
+# THEN
+# make css (to watch tailwind realtime)
