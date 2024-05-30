@@ -15,10 +15,16 @@ func main() {
 	}
 
 	r := gin.Default()
-	r.LoadHTMLGlob("frontend/**/*")
+	r.LoadHTMLGlob("frontend/templates/**/*")
 	r.Static("frontend/static", "./frontend/static")
 
+	users := []string{"bobby", "evan"}
+
 	r.GET("/", controllers.LandingPage)
+
+	for _, v := range users {
+		r.GET("/"+v, controllers.GetUserPage(v))
+	}
 
 	r.Run(os.Getenv("LISTEN_ADDY"))
 }
