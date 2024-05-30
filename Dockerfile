@@ -17,6 +17,6 @@ ENTRYPOINT [ "/build/bin/app" ]
 
 
 ### COMMANDS TO RUN: ###
-# docker-compose up --build
+# make docker-run # OR # docker-compose up --build
 # THEN
 # make css (to watch tailwind realtime)
