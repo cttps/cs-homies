@@ -1,8 +1,6 @@
 package main
 
 import (
-	"os"
-
 	"github.com/cttps/lofi-site/controllers"
 
 	"github.com/gin-gonic/gin"
@@ -26,5 +24,5 @@ func main() {
 		r.GET("/"+v, controllers.GetUserPage(v))
 	}
 
-	r.Run(os.Getenv("LISTEN_ADDY"))
+	r.Run(":6969")
 }
