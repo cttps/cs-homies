@@ -14,6 +14,8 @@ ya its rlly ez:
 
 4. *(optional)* run `make css` in a seperate terminal if u plan on using tailwind + daisy ui to edit any of ur pages. (just edit the template files )
 
+boom ur done, now make a new branch or whatever and edit ur sites 
+
 ## requirements
 1. Make sure u can run make commands from the Makefile. (Do make test to check). Probably Windows only issue, so download https://www.gnu.org/software/make/ or something if ur on win.
 
@@ -27,3 +29,4 @@ ya its rlly ez:
 ## 0aq (nobody has asked me any questions)
 1. no u dont need golang cus its in a docker container
 2. if u want endpoints opened to do stuff on the server, lmk or make the pull request urself if u can bother learning the language
+3. no frontend framework yet
