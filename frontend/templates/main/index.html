@@ -24,15 +24,17 @@
     
     <div class="w-full grid place-items-center">
       <div class="w-full grid grid-cols-3 place-items-center p-3 md:w-3/4 lg:w-2/3 gap-y-5">
+        {{ range $i, $v := .userList}}
         <div class="card w-11/12 shadow-xl bg-base-200">
           <div class="card-body">
-            <h2 class="card-title whitespace-nowrap overflow-clip">Evan's website</h2>
+            <h2 class="card-title whitespace-nowrap overflow-clip capitalize">{{$v}}'s website</h2>
             <p></p>
             <div class="card-actions justify-end">
-              <a href="./evan" class="btn btn-primary">Visit</a>
+              <a href="./{{$v}}" class="btn btn-primary">Visit</a>
             </div>
           </div>
         </div>
+        {{ end }}
         <div class="card w-11/12 shadow-xl bg-base-300 outline-dashed outline-2 outline-zinc-300">
           <div class="card-body h-full">
             <h2 class="card-title">ㅤ</h2>

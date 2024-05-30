@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/cttps/lofi-site/controllers"
+	"github.com/cttps/cs-homies/controllers"
 
 	"github.com/gin-gonic/gin"
 )

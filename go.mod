@@ -1,4 +1,4 @@
-module github.com/cttps/lofi-site
+module github.com/cttps/cs-homies
 
 go 1.21.5
 

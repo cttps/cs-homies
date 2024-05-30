@@ -1,5 +1,5 @@
 ##################################
-FROM golang:1.21 as go-base
+FROM golang:1.21-alpine as go-base
 ##################################
 
 WORKDIR /build
