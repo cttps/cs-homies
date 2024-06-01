@@ -4,7 +4,6 @@ import (
 	"os"
 
 	"github.com/cttps/cs-homies/controllers"
-	"github.com/joho/godotenv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,9 +12,9 @@ func main() {
 
 	// gin.SetMode(gin.ReleaseMode)
 
-	if err := godotenv.Load(); err != nil {
-		panic(err)
-	}
+	// if err := godotenv.Load(); err != nil {
+	// 	panic(err)
+	// }
 
 	r := gin.Default()
 	r.LoadHTMLGlob("frontend/templates/**/*")
