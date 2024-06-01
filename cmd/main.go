@@ -10,13 +10,14 @@ import (
 
 func main() {
 
-	// gin.SetMode(gin.ReleaseMode)
+	gin.SetMode(gin.ReleaseMode)
 
 	// if err := godotenv.Load(); err != nil {
 	// 	panic(err)
 	// }
 
 	r := gin.Default()
+	r.SetTrustedProxies(nil)
 	r.LoadHTMLGlob("frontend/templates/**/*")
 	r.Static("frontend/static", "./frontend/static")
 
@@ -28,7 +29,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "3000"
+		port = "8080"
 	}
 
 	r.Run("0.0.0.0:" + port)
