@@ -10,8 +10,10 @@ import (
 
 func main() {
 
-	gin.SetMode(gin.ReleaseMode)
+	// Comment if you want to see server debug logs
+	// gin.SetMode(gin.ReleaseMode)
 
+	// Uncomment if you want to use a .env file environment variables
 	// if err := godotenv.Load(); err != nil {
 	// 	panic(err)
 	// }
