@@ -3,6 +3,8 @@ package main
 import (
 	"os"
 
+	"github.com/cttps/cs-homies/controllers"
+
 	"github.com/cttps/lofi-site/controllers"
 	"github.com/joho/godotenv"
 
@@ -21,11 +23,9 @@ func main() {
 	r.LoadHTMLGlob("frontend/templates/**/*")
 	r.Static("frontend/static", "./frontend/static")
 
-	users := []string{"evan"}
-
 	r.GET("/", controllers.LandingPage)
 
-	for _, v := range users {
+	for _, v := range controllers.UserArray {
 		r.GET("/"+v, controllers.GetUserPage(v))
 	}
 
