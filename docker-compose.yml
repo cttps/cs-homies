@@ -6,4 +6,4 @@ services:
     volumes:
       - ./frontend:/build/frontend # tailwind watches files in the host's directory (rather than in the container)
     ports:
-      - "6969:6969"
+      - "8080:8080"

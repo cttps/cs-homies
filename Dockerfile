@@ -10,7 +10,6 @@ RUN go mod download
 COPY . .
 RUN go build -o bin/app cmd/main.go
 
-EXPOSE 6969
 #Where the containers main executable is
 ENTRYPOINT [ "/build/bin/app" ]
 
