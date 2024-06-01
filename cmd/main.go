@@ -4,8 +4,6 @@ import (
 	"os"
 
 	"github.com/cttps/cs-homies/controllers"
-
-	"github.com/cttps/lofi-site/controllers"
 	"github.com/joho/godotenv"
 
 	"github.com/gin-gonic/gin"
