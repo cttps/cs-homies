@@ -1,0 +1,55 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    background-color: #fec5ff;
+
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+form {
+    background-color: white;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.658);
+}
+
+.ageBox {
+    width: 50%;
+    text-align: center;
+    font-size: 1.5em;
+    border: 2px solid rgba(0, 0, 0, 0.818);
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: rgb(0, 92, 18);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 40px 10px 40px;
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: rgb(0, 69, 14);
+}
+
+
+
+#result {
+    font-size: 1.5em;
+}

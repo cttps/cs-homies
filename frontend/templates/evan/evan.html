@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="fantasy">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- comment out below for no tailwind ui -->
-    <link href="./frontend/static/output.css" rel="stylesheet">
-  </head>
-  <body>
 
-    <div class="grid place-items-center">
-      <h1 class="text-6xl text-center font-semibold shadow-black bg-transparent">this person hasnt updated their page yet</h1>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- comment out below for no tailwind ui -->
+  <link href="./frontend/static/evan/style.css" rel="stylesheet">
+</head>
 
-  </body>
-</html> 
+<body>
+
+  <form>
+    <h1>Is your relationship socially acceptable?</h1>
+    <h5>The divided by 2 plus 7 rule is here to help!</h5>
+
+
+    <label for="yourAge">What is your age?</label>
+    <input type="number" id="yourAge" class="ageBox">
+    <br><br>
+    <label for="theirAge">What is their age?</label>
+    <input type="number" id="theirAge" class="ageBox">
+    <br><br>
+
+    <button type="button" id="submit" onclick="calculate()">Lets Go!</button>
+
+    <p id="result"></p>
+
+    <p id="rationale"></p>
+
+
+
+  </form>
+
+
+
+  <script src="./frontend/static/evan/index.js"></script>
+</body>
+
+</html>
