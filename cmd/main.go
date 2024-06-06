@@ -24,10 +24,13 @@ func main() {
 	r.Static("frontend/static", "./frontend/static")
 
 	r.GET("/", controllers.LandingPage)
+	r.GET("/75h", controllers.SevenFive)
 
 	for _, v := range controllers.UserArray {
 		r.GET("/"+v, controllers.GetUserPage(v))
 	}
+
+	r.POST("/api/verify-user", controllers.VerifyUser)
 
 	port := os.Getenv("PORT")
 	if port == "" {

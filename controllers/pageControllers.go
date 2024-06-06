@@ -18,3 +18,7 @@ func GetUserPage(name string) gin.HandlerFunc {
 	}
 	return gin.HandlerFunc(f)
 }
+
+func SevenFive(c *gin.Context) {
+	c.HTML(http.StatusOK, "75index.html", gin.H{})
+}
